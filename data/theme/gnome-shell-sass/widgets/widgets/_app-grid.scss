@@ -18,7 +18,7 @@ $app_icon_size: 96px;
 
 // Icon tiles in the app grid
 .app-well-app {
-  @include overview_icon($system_fg_color);
+  @include overview_icon($system_fg_color);  
 
   .overview-icon {
     padding: $base_padding*2;
@@ -35,11 +35,11 @@ $app_icon_size: 96px;
 // app folders
 .app-well-app.app-folder {
   @if $variant == 'light' {
-    @include overview_icon($system_fg_color, $flat: false);
+  @include overview_icon($system_fg_color, $flat: false);
   }
   @else if $variant == 'dark' {
-    background-color: lighten($system_bg_color, 5%);
-    border-radius: $base_border_radius*3;
+  background-color: $dash_background_color;
+  border-radius: $base_border_radius * 3;
   }
 }
 
@@ -59,13 +59,13 @@ $app_icon_size: 96px;
     @include overview_icon($system_bg_color);
 
     .overview-icon {
-      padding: $base_padding*2;
-      border-radius: $base_border_radius*3;
+
+
       color: $fg_color;
     }
     .overview-icon.overview-icon-with-label {
       > StBoxLayout {
-        spacing: $base_padding;
+
       }
     }
   }
@@ -149,9 +149,7 @@ $app_icon_size: 96px;
   margin-bottom: 8px;
   background-color: $fg_color;
 }
-}  
-  
-  
+}
   
 } //end of afd
 
